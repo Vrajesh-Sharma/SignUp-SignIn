@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+    <canvas></canvas>
+    <div class="container">
+        <h2>Welcome, {{ username }}!</h2>
+        <p>This is your profile page.</p>
+        <form action="/signout" method="POST">
+            <button type="submit">Sign Out</button>
+        </form>
+    </div>
+    <script src="{{ url_for('static', filename='js/background.js') }}"></script>
+</body>
+</html>
